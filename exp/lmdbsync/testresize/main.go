@@ -27,8 +27,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/ledgerwatch/lmdb-go/exp/lmdbsync"
-	"github.com/ledgerwatch/lmdb-go/lmdb"
+	"github.com/desertbit/lmdb/exp/lmdbsync"
+	"github.com/desertbit/lmdb/lmdb"
 )
 
 func main() {
@@ -151,7 +151,7 @@ func OpenEnv(path string) (*lmdbsync.Env, error) {
 	if err != nil {
 		return nil, err
 	}
-	err = env.Open(path, 0, 0644)
+	err = env.Open(path, 0, 0o644)
 	if err != nil {
 		env.Close()
 		return nil, err

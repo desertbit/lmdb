@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"os"
 
-	"github.com/ledgerwatch/lmdb-go/lmdb"
+	"github.com/desertbit/lmdb/lmdb"
 )
 
 // ItemList is a list of database items.
@@ -75,7 +75,7 @@ func NewEnv(opt *EnvOptions) (env *lmdb.Env, err error) {
 			return nil, err
 		}
 	}
-	err = env.Open(dir, flags, 0644)
+	err = env.Open(dir, flags, 0o644)
 	if err != nil {
 		return nil, err
 	}

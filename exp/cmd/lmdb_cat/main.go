@@ -10,10 +10,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ledgerwatch/lmdb-go/exp/lmdbsync"
-	"github.com/ledgerwatch/lmdb-go/internal/lmdbcmd"
-	"github.com/ledgerwatch/lmdb-go/lmdb"
-	"github.com/ledgerwatch/lmdb-go/lmdbscan"
+	"github.com/desertbit/lmdb/exp/lmdbsync"
+	"github.com/desertbit/lmdb/internal/lmdbcmd"
+	"github.com/desertbit/lmdb/lmdb"
+	"github.com/desertbit/lmdb/lmdbscan"
 )
 
 func main() {
@@ -91,7 +91,7 @@ func readIn(path string, r io.Reader, opt *Options) error {
 			return err
 		}
 	}
-	err = _env.Open(path, lmdbcmd.OpenFlag(), 0644)
+	err = _env.Open(path, lmdbcmd.OpenFlag(), 0o644)
 	defer _env.Close()
 	if err != nil {
 		return err
@@ -181,7 +181,7 @@ func cat(path string, opt *catOptions) error {
 	if err != nil {
 		return err
 	}
-	err = env.Open(path, lmdbcmd.OpenFlag(), 0644)
+	err = env.Open(path, lmdbcmd.OpenFlag(), 0o644)
 	defer env.Close()
 	if err != nil {
 		return err

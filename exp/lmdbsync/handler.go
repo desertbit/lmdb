@@ -7,7 +7,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/ledgerwatch/lmdb-go/lmdb"
+	"github.com/desertbit/lmdb/lmdb"
 )
 
 // Handler can intercept errors returned by a transaction and handle them in an

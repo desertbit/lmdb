@@ -1,3 +1,3 @@
-module github.com/ledgerwatch/lmdb-go
+module github.com/desertbit/lmdb
 
 go 1.13

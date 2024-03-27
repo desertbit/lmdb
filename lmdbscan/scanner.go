@@ -6,7 +6,7 @@ package lmdbscan
 import (
 	"fmt"
 
-	"github.com/ledgerwatch/lmdb-go/lmdb"
+	"github.com/desertbit/lmdb/lmdb"
 )
 
 // errClosed is an error returned to the user when attempting to operate on a

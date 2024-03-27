@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ledgerwatch/lmdb-go/internal/lmdbtest"
-	"github.com/ledgerwatch/lmdb-go/lmdb"
+	"github.com/desertbit/lmdb/internal/lmdbtest"
+	"github.com/desertbit/lmdb/lmdb"
 )
 
 type testHandler struct {
@@ -59,7 +59,6 @@ type passthroughHandler struct{}
 
 func (*passthroughHandler) HandleTxnErr(ctx context.Context, env *Env, err error) (context.Context, error) {
 	return ctx, err
-
 }
 
 func TestMapFullHandler(t *testing.T) {

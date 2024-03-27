@@ -22,9 +22,9 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/ledgerwatch/lmdb-go/internal/lmdbcmd"
-	"github.com/ledgerwatch/lmdb-go/lmdb"
-	"github.com/ledgerwatch/lmdb-go/lmdbscan"
+	"github.com/desertbit/lmdb/internal/lmdbcmd"
+	"github.com/desertbit/lmdb/lmdb"
+	"github.com/desertbit/lmdb/lmdbscan"
 )
 
 func main() {
@@ -109,7 +109,7 @@ func doMain(opt *Options) error {
 			return err
 		}
 	}
-	err = env.Open(opt.Path, lmdbcmd.OpenFlag(), 0644)
+	err = env.Open(opt.Path, lmdbcmd.OpenFlag(), 0o644)
 	defer env.Close()
 	if err != nil {
 		return err

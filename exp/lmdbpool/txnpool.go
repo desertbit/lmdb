@@ -6,7 +6,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ledgerwatch/lmdb-go/lmdb"
+	"github.com/desertbit/lmdb/lmdb"
 )
 
 // UpdateHandling describes how a TxnPool handles existing lmdb.Readonly

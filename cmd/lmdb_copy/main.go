@@ -14,8 +14,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/ledgerwatch/lmdb-go/internal/lmdbcmd"
-	"github.com/ledgerwatch/lmdb-go/lmdb"
+	"github.com/desertbit/lmdb/internal/lmdbcmd"
+	"github.com/desertbit/lmdb/lmdb"
 )
 
 func main() {

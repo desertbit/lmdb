@@ -6,11 +6,13 @@ import (
 	"io"
 	"os"
 
-	"github.com/ledgerwatch/lmdb-go/lmdb"
+	"github.com/desertbit/lmdb/lmdb"
 )
 
-var flagPrintVersion bool
-var flagOpenNoSubDir bool
+var (
+	flagPrintVersion bool
+	flagOpenNoSubDir bool
+)
 
 func init() {
 	flag.BoolVar(&flagPrintVersion, "V", false, "Write the library version number to the standard output, and exit.")
